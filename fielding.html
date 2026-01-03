@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fielding Speed & Reflex in Cricket</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #000;
+}
+
+/* HEADER */
+header {
+     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.6em;
+    color: #ffd700;
+    animation: slideIn 1.5s ease;
+}
+
+header p {
+    font-size: 1.3em;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* DARK LIGHT TOGGLE */
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #00ffcc;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+.section {
+    margin-bottom: 60px;
+    background: rgba(255,255,255,0.1);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    animation: fadeUp 1.2s ease;
+}
+
+body.light .section {
+    background: rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #00ffcc;
+    font-size: 2.4em;
+    margin-bottom: 15px;
+}
+
+.section p, li {
+    font-size: 1.1em;
+    line-height: 1.9;
+}
+
+/* PLAYER CARDS */
+.players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.player-card {
+    background: linear-gradient(45deg, #1f4037, #99f2c8);
+    padding: 25px;
+    border-radius: 15px;
+    color: #000;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.player-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px #00ffcc;
+}
+
+/* BACK BUTTON */
+.back-btn {
+    display: inline-block;
+    margin: 60px auto;
+    padding: 18px 40px;
+    background: linear-gradient(45deg, #ff9800, #ff5722);
+    color: #fff;
+    font-size: 1.2em;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* FLOATING ARROWS */
+.scroll-btn {
+    position: fixed;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background: #00ffcc;
+    color: #000;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 55px;
+    cursor: pointer;
+    animation: float 2s infinite;
+    z-index: 999;
+}
+
+#scrollUp { bottom: 100px; }
+#scrollDown { bottom: 30px; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* ANIMATIONS */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <button class="toggle" onclick="toggleMode()">🌙 / ☀</button>
+    <h1>Fielding Speed & Reflex in Cricket</h1>
+    <p>Where agility, anticipation and lightning reflexes turn matches around.</p>
+</header>
+
+<div class="container">
+
+<div class="section">
+<h2>Why Fielding Speed & Reflex Matter</h2>
+<p>
+In modern cricket, fast outfields and aggressive batting demand elite athleticism.
+A sharp reflex catch or rapid throw can save 20–30 runs or dismiss a key batsman.
+</p>
+</div>
+
+<div class="section">
+<h2>Cricket-Specific Speed & Reflex Movements</h2>
+<ul>
+<li>Explosive first-step acceleration</li>
+<li>Low-body dives and instant recovery</li>
+<li>One-hand reflex catches</li>
+<li>Fast release throws under pressure</li>
+<li>Boundary sprinting with awareness</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>Legendary Fielders Known for Speed & Reflex</h2>
+
+<div class="players">
+<div class="player-card">
+<h3>Jonty Rhodes</h3>
+<p>Icon of athletic fielding, lightning reflexes and fearless dives.</p>
+</div>
+
+<div class="player-card">
+<h3>Ravindra Jadeja</h3>
+<p>Fastest arm in world cricket with razor-sharp reflex throws.</p>
+</div>
+
+<div class="player-card">
+<h3>AB de Villiers</h3>
+<p>Exceptional anticipation and close-catching brilliance.</p>
+</div>
+
+<div class="player-card">
+<h3>Suresh Raina</h3>
+<p>One of the quickest infielders with electric reactions.</p>
+</div>
+
+<div class="player-card">
+<h3>Ben Stokes</h3>
+<p>Explosive speed, athletic leaps and clutch catches.</p>
+</div>
+
+<div class="player-card">
+<h3>Glenn Maxwell</h3>
+<p>360° agility and unpredictable reflex catching.</p>
+</div>
+</div>
+
+</div>
+
+<center>
+<a href="VIDEO-6.html		" class="back-btn">⬅ BACK TO MAIN WEBSITE</a>
+</center>
+
+</div>
+
+<div id="scrollUp" class="scroll-btn" onclick="scrollToTop()">⬆</div>
+<div id="scrollDown" class="scroll-btn" onclick="scrollToBottom()">⬇</div>
+
+<footer>
+© Cricket Fielding Excellence Hub
+</footer>
+
+<script>
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function scrollToBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+function toggleMode() {
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>

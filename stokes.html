@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ben Stokes - Cricket Legend</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+<style>
+/* RESET */
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior: smooth; }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #111;
+    color: #f0f0f0;
+    transition: all 0.5s;
+}
+a { text-decoration:none; color:inherit; }
+img { max-width:100%; display:block; }
+
+/* DARK/LIGHT MODE */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #111;
+}
+body.light-mode header { background: linear-gradient(135deg,#444,#888); }
+body.light-mode footer { background: linear-gradient(135deg,#ccc,#eee); color: #111; }
+body.light-mode .scroll-arrow { background: rgba(0,0,0,0.2); color: #111; }
+
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    background: linear-gradient(45deg,#ff3,#f06);
+    color:#111;
+    transition: 0.3s;
+}
+
+/* HERO SECTION */
+header {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a); /* Darker hero gradient */
+    transition: background 0.5s;
+}
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size:4rem;
+    color:#ffdd00;
+    z-index:1;
+    animation: glow 2s infinite alternate;
+}
+header p {
+    font-size:1.6rem;
+    margin-top:20px;
+    color:#fff;
+    z-index:1;
+}
+@keyframes glow {
+    0% { text-shadow:0 0 5px #ffdd00,0 0 10px #ffdd00,0 0 20px #ff0; }
+    100% { text-shadow:0 0 20px #fff,0 0 40px #ffdd00,0 0 60px #ff0; }
+}
+
+/* MAIN CONTENT */
+main { padding:50px 10%; line-height:1.8; }
+section { margin-bottom:80px; opacity:0; animation: fadeIn 1.5s ease forwards; }
+@keyframes fadeIn { to { opacity:1; } }
+section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size:2.5rem;
+    margin-bottom:20px;
+    color:#ffdd00;
+}
+section p { font-size:1.1rem; margin-bottom:20px; }
+
+/* BACK BUTTON */
+.back-button {
+    display:inline-block;
+    padding:15px 30px;
+    font-size:1.2rem;
+    font-weight:bold;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff3,#f06);
+    color:#111;
+    text-align:center;
+    transition: transform 0.3s;
+}
+.back-button:hover { transform: scale(1.1); }
+
+/* SCROLL ARROWS */
+.scroll-arrow {
+    position:fixed;
+    font-size:2rem;
+    color:#ffdd00;
+    cursor:pointer;
+    z-index:1000;
+    padding:12px;
+    border-radius:50%;
+    background: rgba(0,0,0,0.6);
+    transition: all 0.3s;
+    animation: float 2s ease-in-out infinite;
+}
+.scroll-top { bottom:80px; right:30px; }
+.scroll-bottom { bottom:20px; right:30px; }
+.scroll-arrow:hover { background: rgba(255,221,0,0.8); transform: scale(1.2); }
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:50px 10%;
+    background:linear-gradient(135deg,#111,#333);
+    color:#ffdd00;
+    font-family:'Orbitron',sans-serif;
+    font-size:1.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    header h1{ font-size:3rem; }
+    section h2{ font-size:2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- DARK/LIGHT TOGGLE -->
+<div class="toggle-container">
+    <button class="toggle-btn" onclick="toggleMode()">Dark / Light Mode</button>
+</div>
+
+<!-- HERO -->
+<header>
+    <h1>Ben Stokes</h1>
+    <p>The Relentless All-Rounder – England's Cricketing Warrior</p> <!-- Updated text -->
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+    <section>
+        <h2>Early Life</h2>
+        <p>Ben Stokes was born on June 4, 1991, in Christchurch, New Zealand, and moved to England as a child. From a young age, his passion for cricket was evident, and he quickly rose through the ranks of English cricket academies, showing incredible skill as an all-rounder.</p>
+    </section>
+
+    <section>
+        <h2>Domestic Career</h2>
+        <p>Stokes has played for Durham in English domestic cricket, making significant contributions both with the bat and ball. His aggressive batting style and handy medium-pace bowling have made him a standout performer in County Championships and T20 leagues.</p>
+    </section>
+
+    <section>
+        <h2>International Career</h2>
+        <p>Ben Stokes is best known for his heroics with the England national team. His performances in ODI, T20, and Test cricket have cemented his legacy, especially in high-pressure situations like the 2019 World Cup final and the Ashes series. His resilience, leadership, and match-winning ability are legendary.</p>
+    </section>
+
+    <section>
+        <h2>Records & Achievements</h2>
+        <p>Some of Stokes' remarkable achievements include the fastest double-century in a Test match by an England player, multiple Man-of-the-Match awards, and a reputation for incredible comebacks that have won England crucial games.</p>
+    </section>
+
+    <section>
+        <h2>Philosophy & Legacy</h2>
+        <p>Stokes is known not only for his cricketing prowess but also for his mental toughness, team spirit, and dedication. His impact on English cricket is monumental, inspiring future generations to play with passion, courage, and heart.</p>
+    </section>
+
+    <div style="text-align:center; margin-top:50px;">
+        <a href="VIDEO-6.html" class="back-button">Back to Main Website</a>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    “Fearless on the Field, Legendary Forever – Ben Stokes”
+</footer>
+
+<!-- FLOATING ARROWS -->
+<div class="scroll-arrow scroll-top" id="scrollTopArrow">&#8679;</div>
+<div class="scroll-arrow scroll-bottom" onclick="scrollBottom()">&#8681;</div>
+
+<script>
+// DARK/LIGHT MODE
+function toggleMode() {
+    document.body.classList.toggle('light-mode');
+}
+
+// SCROLL FUNCTIONS
+const scrollTopArrow = document.getElementById('scrollTopArrow');
+scrollTopArrow.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+function scrollBottom() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

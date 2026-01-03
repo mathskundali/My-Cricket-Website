@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kane Williamson - Cricket Legend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ------------------- GENERAL STYLING ------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      transition: all 0.5s ease;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    /* ------------------- HEADER ------------------- */
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+    }
+
+    /* Typewriter effect */
+    .typewriter {
+      font-size: 3em;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.15em solid #ffd700;
+      width: 0;
+      animation: typing 3s steps(14, end) forwards, blink-cursor 0.7s step-end 4;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 14ch; }
+    }
+
+    @keyframes blink-cursor {
+      50% { border-color: transparent; }
+      100% { border-color: #ffd700; }
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 20px;
+      animation: fadeInUp 2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(50px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+
+    /* ------------------- MAIN CONTENT ------------------- */
+    main {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 15px;
+      position: relative;
+      overflow: hidden;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 1s ease;
+    }
+
+    section.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    section h2 {
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+
+    /* ------------------- BUTTONS ------------------- */
+    .main-button, .arrow-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      background: #ffd700;
+      color: #121212;
+      cursor: pointer;
+      transition: all 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 10;
+    }
+
+    .main-button:hover, .arrow-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(255,215,0,0.7);
+    }
+
+    .back-main {
+      display: block;
+      text-align: center;
+      margin: 50px auto;
+      width: fit-content;
+    }
+
+    /* ------------------- FLOATING ARROWS ------------------- */
+    .arrow-top, .arrow-bottom {
+      position: fixed;
+      right: 30px;
+      background: #ffd700;
+      color: #121212;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5em;
+      z-index: 1000;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .arrow-top { bottom: 90px; }
+    .arrow-bottom { bottom: 30px; }
+
+    @keyframes float {
+      0%, 100% {transform: translateY(0);}
+      50% {transform: translateY(-10px);}
+    }
+
+    /* ------------------- DARK/LIGHT MODE ------------------- */
+    .mode-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ffd700;
+      color: #121212;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    /* ------------------- FOOTER & SLOGAN ------------------- */
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(90deg, #2a5298, #1e3c72);
+      color: #ffd700;
+      font-size: 1.5em;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* ------------------- DARK MODE STYLING ------------------- */
+    body.light-mode {
+      background-color: #f5f5f5;
+      color: #121212;
+    }
+
+    body.light-mode header {
+      background: linear-gradient(90deg, #ffd700, #ffba00);
+      color: #121212;
+    }
+
+    body.light-mode section {
+      background: rgba(0,0,0,0.05);
+    }
+
+    body.light-mode footer {
+      background: linear-gradient(90deg, #ffba00, #ffd700);
+      color: #121212;
+    }
+
+    /* ------------------- CREATIVE ANIMATIONS ------------------- */
+    .floating-ball {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #ffd700;
+      top: 0;
+      animation: moveBall linear infinite;
+    }
+
+    @keyframes moveBall {
+      0% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(400px) translateX(200px); }
+      100% { transform: translateY(0) translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- DARK/LIGHT MODE TOGGLE -->
+  <div class="mode-btn" onclick="toggleMode()">Toggle Dark/Light Mode</div>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="typewriter">Kane Williamson</h1>
+    <p>The Calm Genius of Cricket</p>
+
+    <!-- Floating cricket balls -->
+    <div class="floating-ball" style="left:10%; animation-duration: 8s;"></div>
+    <div class="floating-ball" style="left:70%; animation-duration: 10s;"></div>
+    <div class="floating-ball" style="left:40%; animation-duration: 12s;"></div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section>
+      <h2>Biography</h2>
+      <p>Kane Williamson, born on 8 August 1990 in Tauranga, New Zealand, is regarded as one of the greatest modern-day cricketers. Known for his calm temperament and remarkable technique, he has led New Zealand to numerous victories and earned respect worldwide for his sportsmanship.</p>
+    </section>
+
+    <section>
+      <h2>Career Highlights</h2>
+      <p>Williamson's international debut was in 2010. He quickly rose through the ranks due to his consistent performances in Tests, ODIs, and T20Is. Under his captaincy, New Zealand reached the 2019 ICC Cricket World Cup final and clinched the inaugural World Test Championship in 2021.</p>
+    </section>
+
+    <section>
+      <h2>Records & Achievements</h2>
+      <p>He has scored over 7000 Test runs, with a batting average above 50. His leadership is marked by resilience, strategic brilliance, and mentoring young talents. Kane is also known for his exemplary fielding and sportsmanship.</p>
+    </section>
+
+    <section>
+      <h2>Playing Style</h2>
+      <p>Kane is a right-handed top-order batsman with a solid technique. His ability to adapt across formats, read the game situation, and remain composed under pressure makes him a rare cricketing genius. Fans admire his elegant stroke play and calm demeanor.</p>
+    </section>
+
+    <!-- BACK TO MAIN WEBSITE BUTTON -->
+    <a href="VIDEO-6.html" class="main-button back-main">Back to Main Website</a>
+  </main>
+
+  <!-- FLOATING ARROWS -->
+  <div class="arrow-top" onclick="scrollToTop()">⬆</div>
+  <div class="arrow-bottom" onclick="scrollToBottom()">⬇</div>
+
+  <!-- FOOTER -->
+  <footer>
+    "Leading with Calm, Inspiring Through Cricket"
+  </footer>
+
+  <!-- ------------------- JS ------------------- -->
+  <script>
+    // SCROLL FUNCTIONS
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+
+    // DARK/LIGHT MODE TOGGLE
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    // SECTION SCROLL ANIMATION
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      const triggerBottom = window.innerHeight / 5 * 4;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom){
+          section.classList.add('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

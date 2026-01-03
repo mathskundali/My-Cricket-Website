@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Tendulkar – The God of Cricket</title>
+
+<style>
+:root {
+  --bg: #f4f6f9;
+  --text: #111;
+  --card: #ffffff;
+  --accent: #ff9800;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #1e293b;
+  --accent: #38bdf8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.4s;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #0d47a1, #1976d2);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.3rem;
+}
+
+/* BUTTONS */
+.top-buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 14px 28px;
+  margin: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  background: var(--accent);
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* CONTENT */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.section {
+  background: var(--card);
+  padding: 35px;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: slideUp 1.2s;
+}
+
+.section h2 {
+  font-size: 2.3rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.section p {
+  line-height: 1.9;
+  font-size: 1.05rem;
+}
+
+/* FLOATING ARROWS */
+.arrow {
+  position: fixed;
+  right: 25px;
+  background: var(--accent);
+  color: black;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  animation: float 2s infinite;
+  z-index: 1000;
+}
+
+.arrow.top {
+  bottom: 100px;
+}
+
+.arrow.bottom {
+  bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.95rem;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>
+</head>
+
+<body id="top">
+
+<header>
+  <h1>🏏 Sachin Tendulkar</h1>
+  <p>The God of Cricket • Master Blaster • Bharat Ratna Awardee</p>
+
+  <div class="top-buttons">
+    <a href="VIDEO-6.html">
+      <button class="btn">⬅ BACK TO MAIN WEBSITE</button>
+    </a>
+    <button class="btn" onclick="toggleMode()">🌙 Light / Dark Mode</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Early Life & Childhood</h2>
+    <p>
+      Sachin Ramesh Tendulkar was born on 24 April 1973 in Mumbai, Maharashtra, India.
+      From a very young age, Sachin showed extraordinary talent with the cricket bat.
+      His elder brother Ajit Tendulkar recognized his potential and introduced him to
+      coach Ramakant Achrekar, who played a crucial role in shaping Sachin’s career.
+    </p>
+    <p>
+      Sachin trained rigorously at Shivaji Park, often practicing for hours without breaks.
+      His discipline, passion, and hunger for excellence were evident even as a child.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>International Debut</h2>
+    <p>
+      Sachin made his Test debut for India at the age of just 16 against Pakistan in 1989.
+      Facing some of the fiercest fast bowlers in the world, he displayed remarkable courage.
+      His ODI debut followed soon after.
+    </p>
+    <p>
+      These early performances signaled the arrival of a future legend who would redefine
+      cricket history forever.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Batting Style & Technique</h2>
+    <p>
+      Sachin Tendulkar was known for his perfect balance, impeccable timing, and technical
+      mastery. His straight drive is considered one of the most beautiful shots in cricket.
+    </p>
+    <p>
+      He combined classical technique with modern aggression, making him effective in
+      both Test cricket and limited-overs formats.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Records & Achievements</h2>
+    <p>
+      • Highest run-scorer in international cricket<br>
+      • Only player to score 100 international centuries<br>
+      • First double century in ODI cricket<br>
+      • Over 34,000 international runs
+    </p>
+    <p>
+      His consistency and longevity are unmatched in the history of the sport.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>World Cup Glory</h2>
+    <p>
+      Sachin played in six ICC Cricket World Cups. His dream was fulfilled in 2011
+      when India lifted the World Cup on home soil.
+    </p>
+    <p>
+      He was the highest run-scorer of the tournament and played a vital role in India's success.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Awards & Honors</h2>
+    <p>
+      • Bharat Ratna (India’s highest civilian award)<br>
+      • Padma Vibhushan<br>
+      • Padma Shri<br>
+      • Rajiv Gandhi Khel Ratna
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Retirement & Legacy</h2>
+    <p>
+      Sachin retired from international cricket in 2013 after a glorious 24-year career.
+      His farewell Test match at Wankhede Stadium was an emotional moment for fans worldwide.
+    </p>
+    <p>
+      Even after retirement, Sachin continues to inspire millions through mentorship,
+      philanthropy, and his love for the game.
+    </p>
+  </div>
+
+</div>
+
+<!-- FLOATING ARROWS -->
+<div class="arrow top" onclick="scrollToTop()">⬆</div>
+<div class="arrow bottom" onclick="scrollToBottom()">⬇</div>
+
+<footer id="bottom">
+  <p>© 2026 | Sachin Tendulkar Cricket Web Page | Designed with ❤️ for Cricket Fans</p>
+</footer>
+
+<script>
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function scrollToBottom() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+
+function toggleMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>

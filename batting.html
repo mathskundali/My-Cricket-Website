@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cricket Batting Technique & Timing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+    --bg: #021b2e;
+    --bg2: #043a5e;
+    --text: #f5f5f5;
+    --card: rgba(0,0,0,0.45);
+    --accent: #ffcc00;
+}
+
+.light {
+    --bg: #f4faff;
+    --bg2: #dbefff;
+    --text: #111;
+    --card: rgba(255,255,255,0.9);
+    --accent: #005eff;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, var(--bg), var(--bg2));
+    color: var(--text);
+    transition: 0.5s;
+}
+
+h1,h2,h3 {
+    color: var(--accent);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    padding: 90px 20px;
+    text-align: center;
+    background: radial-gradient(circle at top, #0a4d8c, transparent);
+    animation: fadeIn 2s ease;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+header p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 22px;
+}
+
+/* =========================
+   SECTION & CARDS
+========================= */
+section {
+    padding: 60px 10%;
+}
+
+.card {
+    background: var(--card);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: slideUp 1.2s ease forwards;
+}
+
+/* =========================
+   CRICKET BALL ANIMATION
+========================= */
+.ball {
+    width: 30px;
+    height: 30px;
+    background: crimson;
+    border-radius: 50%;
+    box-shadow: 0 0 15px crimson;
+    animation: ballMove 6s linear infinite;
+    margin: 40px auto;
+}
+
+@keyframes ballMove {
+    0% { transform: translateX(-300px); }
+    50% { transform: translateX(300px); }
+    100% { transform: translateX(-300px); }
+}
+
+/* =========================
+   PLAYER LIST
+========================= */
+.players {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+
+.player {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05);
+    border-left: 6px solid var(--accent);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.back-btn, .mode-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.back-btn {
+    background: var(--accent);
+    color: black;
+}
+
+.mode-btn {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+/* =========================
+   FLOATING ARROWS
+========================= */
+.arrow {
+    position: fixed;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    background: var(--accent);
+    color: black;
+    font-size: 28px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: float 2s infinite;
+    z-index: 999;
+}
+
+#topArrow { bottom: 90px; }
+#bottomArrow { bottom: 20px; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: black;
+    padding: 30px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Batting Technique & Timing</h1>
+<p>Learn how the world's greatest batsmen master balance, footwork, timing, and mental strength.</p>
+<button class="mode-btn" onclick="toggleMode()">🌙 / ☀ MODE</button>
+</header>
+
+<div class="ball"></div>
+
+<section>
+
+<div class="card">
+<h2>Why Batting Technique Matters</h2>
+<p>
+Perfect batting technique ensures consistency, longevity, and control. Great batsmen rely on balance,
+head position, and timing rather than raw power.
+</p>
+</div>
+
+<div class="card">
+<h2>Timing – The Secret of Greats</h2>
+<p>
+Timing means meeting the ball with a still head, full face of the bat, and smooth swing.
+Shots played with timing travel faster than power-hitting.
+</p>
+</div>
+
+<div class="card">
+<h2>Legends Known for Technique & Timing</h2>
+
+<div class="players">
+<div class="player">
+<h3>Sachin Tendulkar 🇮🇳</h3>
+<p>Textbook technique, perfect balance, unmatched timing.</p>
+</div>
+
+<div class="player">
+<h3>Virat Kohli 🇮🇳</h3>
+<p>Precision footwork, cover drives, chase master.</p>
+</div>
+
+<div class="player">
+<h3>Babar Azam 🇵🇰</h3>
+<p>Elegant strokeplay, soft hands, flawless timing.</p>
+</div>
+
+<div class="player">
+<h3>Joe Root 🏴</h3>
+<p>Late bat, wrist control, spin domination.</p>
+</div>
+
+<div class="player">
+<h3>Kane Williamson 🇳🇿</h3>
+<p>Calm mind, minimal movement, perfect judgment.</p>
+</div>
+
+<div class="player">
+<h3>AB de Villiers 🇿🇦</h3>
+<p>360° batting with elite hand-eye coordination.</p>
+</div>
+</div>
+</div>
+
+<div style="text-align:center;">
+<a href="VIDEO-6.html" class="back-btn">
+⬅ BACK TO MAIN WEBSITE
+</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Cricket Learning Hub | Batting Technique & Timing
+</footer>
+
+<div id="topArrow" class="arrow" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</div>
+<div id="bottomArrow" class="arrow" onclick="window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})">⬇</div>
+
+<script>
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>

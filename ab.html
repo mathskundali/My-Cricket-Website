@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB de Villiers - Cricket Legend</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-light: #f5f5f5;
+    --text-light: #1a1a1a;
+    --bg-dark: #1a1a1a;
+    --text-dark: #f5f5f5;
+    --accent: #ff4500;
+    --shadow: rgba(255, 69, 0, 0.7);
+}
+
+/* --- Body and Fonts --- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.5s, color 0.5s;
+    overflow-x: hidden;
+}
+
+/* --- Header --- */
+header {
+    background: linear-gradient(120deg, #ff4500, #ff6347);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+header h1 {
+    font-size: 3em;
+    animation: headerFade 2s ease-in-out forwards;
+}
+header p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    animation: subFade 2s ease-in-out forwards 0.5s;
+}
+@keyframes headerFade {
+    0% {opacity: 0; transform: translateY(-80px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+@keyframes subFade {
+    0% {opacity: 0; transform: translateY(50px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* --- Section Animations --- */
+section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+}
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+section:nth-child(even) {
+    background-color: rgba(255, 69, 0, 0.05);
+}
+
+/* --- Centered Image Above Biography --- */
+#abd-image {
+    display: block;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+    width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+#abd-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(255,69,0,0.6);
+}
+
+/* --- Buttons --- */
+.button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: white;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 20px var(--shadow);
+}
+.button:hover {
+    transform: scale(1.15) rotate(-1deg);
+    box-shadow: 0 0 35px var(--shadow);
+}
+
+/* --- Floating Arrows --- */
+.arrow {
+    position: fixed;
+    background-color: var(--accent);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    font-size: 30px;
+    cursor: pointer;
+    animation: float 2s infinite;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.arrow:hover {
+    transform: scale(1.3) rotate(10deg);
+}
+#arrowUp { bottom: 90px; right: 30px; }
+#arrowDown { bottom: 20px; right: 30px; }
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* --- Dark Mode Button --- */
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1000;
+}
+#darkModeToggle:hover {
+    background-color: #ff6347;
+}
+
+/* --- Footer / Slogan --- */
+footer {
+    background-color: #ff4500;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    position: relative;
+}
+footer p {
+    margin: 0;
+    animation: footerGlow 2s infinite alternate;
+}
+@keyframes footerGlow {
+    0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff6347; }
+    100% { text-shadow: 0 0 15px #fff, 0 0 30px #ff4500; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.5em; }
+    p { font-size: 16px; }
+}
+/* === BACK TO MAIN WEBSITE BUTTON === */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 38px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #ff4500, #ff6a00);
+    border-radius: 50px;
+    box-shadow: 0 0 25px rgba(255,69,0,0.6);
+    position: relative;
+    overflow: hidden;
+    animation: backPulse 2.5s infinite;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Pulse glow */
+@keyframes backPulse {
+    0% { box-shadow: 0 0 18px rgba(255,69,0,0.5); }
+    50% { box-shadow: 0 0 35px rgba(255,69,0,0.9); }
+    100% { box-shadow: 0 0 18px rgba(255,69,0,0.5); }
+}
+
+/* Hover motion */
+.back-button:hover {
+    transform: scale(1.15) translateX(-6px);
+    box-shadow: 0 0 45px rgba(255,69,0,1);
+}
+
+/* Shine sweep */
+.back-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.6),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.back-button:hover::after {
+    left: 120%;
+}
+
+</style>
+</head>
+<body>
+
+<!-- Dark Mode Toggle -->
+<button id="darkModeToggle">Dark Mode</button>
+
+<!-- Header -->
+<header>
+    <h1>AB de Villiers</h1>
+    <p>"Mr. 360° – Revolutionizing Cricket Forever"</p>
+</header>
+
+<!-- Centered Image Above Biography -->
+<img id="C:\Users\Acer\Desktop\New folder (4)\ABD.jpg">
+
+<!-- Biography Section -->
+<section id="biography">
+    <h2>Biography</h2>
+    <p>Abraham Benjamin de Villiers, popularly known as AB de Villiers, is one of the greatest cricketers of all time. Born on 17 February 1984 in Pretoria, South Africa, he displayed extraordinary talent from a young age, quickly rising through the ranks of domestic cricket to make a lasting impact on the international stage.</p>
+    <p>Known for his versatility and unmatched innovation, AB de Villiers earned the nickname "Mr. 360" for his ability to play shots all around the wicket. His aggressive yet calculated batting style made him a formidable opponent in both Tests and limited-overs formats.</p>
+</section>
+
+<!-- Career Achievements -->
+<section id="achievements">
+    <h2>Career Achievements</h2>
+    <p>Throughout his illustrious career, AB de Villiers has achieved numerous milestones, including:</p>
+    <ul>
+        <li>Over 8,000 runs in One Day Internationals (ODIs) with an astonishing average of 53.5.</li>
+        <li>Fastest 50, 100, and 150 in ODI history.</li>
+        <li>Capable of changing the course of a match in just a few overs.</li>
+        <li>Highly successful IPL career with Royal Challengers Bangalore, becoming a fan favorite for his explosive batting.</li>
+        <li>A true ambassador of sportsmanship and innovation in cricket.</li>
+    </ul>
+</section>
+
+<!-- Memorable Moments -->
+<section id="moments">
+    <h2>Memorable Moments</h2>
+    <p>AB de Villiers has been part of countless iconic moments in cricket history:</p>
+    <ul>
+        <li>Scoring the fastest 50 in just 16 balls against West Indies in 2015.</li>
+        <li>Historic 149-ball 278 against Pakistan in 2010.</li>
+        <li>Match-winning partnerships that have turned impossible games into victories.</li>
+        <li>His leadership as captain and vice-captain of the South African national team.</li>
+    </ul>
+</section>
+
+<!-- Back to Main Website -->
+<section style="text-align:center;">
+  <a href="VIDEO-6.html" class="back-button">
+⬅ BACK TO MAIN WEBSITE
+</a>
+</section>
+
+<!-- Footer Slogan -->
+<footer>
+    <p>"AB de Villiers – The Genius Who Redefined Cricket"</p>
+</footer>
+
+<!-- Floating Arrows -->
+<div id="arrowUp" class="arrow" onclick="scrollToTop()">&#8679;</div>
+<div id="arrowDown" class="arrow" onclick="scrollToBottom()">&#8681;</div>
+
+<script>
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+    if(document.body.style.backgroundColor === 'rgb(26, 26, 26)'){
+        document.body.style.backgroundColor = 'var(--bg-light)';
+        document.body.style.color = 'var(--text-light)';
+        darkModeToggle.textContent = "Dark Mode";
+    } else {
+        document.body.style.backgroundColor = 'var(--bg-dark)';
+        document.body.style.color = 'var(--text-dark)';
+        darkModeToggle.textContent = "Light Mode";
+    }
+});
+
+// Scroll Functions
+function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+function scrollToBottom() { window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }
+
+// Fade-in Sections on Scroll
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom){
+            section.classList.add('visible');
+        }
+    });
+});
+</script>
+</body>
+</html>
